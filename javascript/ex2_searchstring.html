@@ -11,7 +11,7 @@
 			<br>
 			<div>Sensitive Case:
 			  	<input type="radio" name="sen" id="yes">Yes
-			    <input type="radio" name="sen" id="no">No
+				<input type="radio" name="sen" id="no">No
 			</div>
 			<br>
 			<div>Search: <input type="text" id="search"></div>
@@ -22,14 +22,14 @@
 
 			<script>
 				function searching() {
-				    var i = document.getElementById("input").value;
-				    var s = document.getElementById("search").value;
+				    var inp = document.getElementById("input").value;
+				    var sch = document.getElementById("search").value;
 			    	if (document.getElementById("yes").checked) {
-				    var result = i.split(" ");
-				    var j= 0;
-				    var count=0;
+				    var result = inp.split(" ");
+				    var j = 0;
+				    var count = 0;
 				    while (result[j] != null) {
-				        if (result[j]==s) {
+				        if (result[j]==sch) {
 				        	count++;
 				        }
 			        	j++;
@@ -37,11 +37,11 @@
 			    	document.getElementById("re").innerHTML = count;
 			  		}
 			  		else {
-					    var uninput = i.toUpperCase();
-					    var unseach = s.toUpperCase();
+					    var uninput = inp.toUpperCase();
+					    var unseach = sch.toUpperCase();
 					    var result = uninput.split(" ");
-					    var j= 0;
-					    var count=0;
+					    var j = 0;
+					    var count = 0;
 					    while (result[j] != null) {
 			        		if (result[j]==unseach) {
 			          			count++;
